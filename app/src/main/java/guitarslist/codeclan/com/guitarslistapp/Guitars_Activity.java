@@ -1,5 +1,6 @@
 package guitarslist.codeclan.com.guitarslistapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +26,18 @@ public class Guitars_Activity extends AppCompatActivity {
     }
 
     public void onListItemClick(View listItem) {
-        Guitar guitar = (Guitar) listItem.getTag();
-        Log.d("Guitar Title: ", guitar.getTitle());
+        Guitar guitarClicked = (Guitar) listItem.getTag();
+        Log.d("Guitar Title: ", guitarClicked.getTitle());
+
+        openGuitarDetail(guitarClicked);
     }
+
+    public void openGuitarDetail(Guitar guitarToOpen) {
+        Log.d("openGuitarDetail: ", guitarToOpen.getTitle());
+
+        Intent intent = new Intent(this, GuitarDetailsActivity.class);
+        intent.putExtra("guitarToOpen", guitarToOpen);
+        startActivity(intent);
+    }
+
 }

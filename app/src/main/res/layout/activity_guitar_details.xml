@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Guitars_Activity">
+    tools:context=".GuitarDetailsActivity">
 
-    <ListView
-        android:id="@+id/guitarListViewId"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+    <TextView
+        android:id="@+id/guitarTitleTextViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="27dp"
+        tools:text="This is working" />
 </android.support.constraint.ConstraintLayout>
