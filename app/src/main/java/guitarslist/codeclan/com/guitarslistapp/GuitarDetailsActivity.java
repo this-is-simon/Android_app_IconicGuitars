@@ -21,8 +21,9 @@ public class GuitarDetailsActivity extends AppCompatActivity {
         TextView guitarTitle = findViewById(R.id.guitarTitleTextViewId);
         guitarTitle.setText(guitar.getTitle().toString());
 
-//        TextView guitarTitle = (TextView) listItemView.findViewById(R.id.guitarTitleTextViewId);
-//        guitarTitle.setText(currentGuitar.getTitle().toString());
+        TextView guitarDetails = findViewById(R.id.guitarDetailsTextViewId);
+        guitarDetails.setText(guitar.getDetails().toString());
+
 
     }
 

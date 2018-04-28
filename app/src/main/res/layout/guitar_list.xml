@@ -41,4 +41,5 @@
         app:layout_constraintStart_toEndOf="@+id/rankingTextViewID"
         app:layout_constraintTop_toBottomOf="@+id/guitarTitleTextViewId"
         tools:text="yearView" />
+
 </android.support.constraint.ConstraintLayout>
