@@ -14,8 +14,6 @@ public class TopGuitars {
         return instance;
     }
 
-
-
     private ArrayList<Guitar> list;
     private HashMap<String, Integer> guitarImageHashMap;
 
@@ -25,13 +23,14 @@ public class TopGuitars {
         guitarImageHashMap.put("Fender Stratocaster", R.drawable.fender_strat);
         guitarImageHashMap.put("Fender Telecaster", R.drawable.fender_tele);
         guitarImageHashMap.put("Gibson ES150", R.drawable.gibson_es150);
+        guitarImageHashMap.put("Gibson Les Paul", R.drawable.gibson_les_paul);
 
         list = new ArrayList<Guitar>();
 
         list.add(new Guitar(1, "Fender Stratocaster", 1954, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra pretium velit id tincidunt. Duis vel metus in massa rhoncus pulvinar. Suspendisse elit purus, rutrum at nunc et, dignissim pharetra leo. Aliquam erat volutpat. Fusce luctus ligula ligula, sit amet maximus massa viverra eu. Maecenas ac viverra purus. Duis arcu metus, tempor quis sollicitudin commodo, mattis eu lectus. Proin aliquam orci et lectus egestas, lacinia venenatis leo lacinia. Maecenas sed ante quis purus rutrum varius a et quam. Suspendisse vehicula enim non quam vehicula, sit amet sodales mi vestibulum. Vivamus sollicitudin condimentum purus, eu iaculis lacus. Donec dignissim est eget malesuada ornare. Pellentesque vehicula nibh dolor, nec efficitur ex hendrerit nec.", false));
         list.add(new Guitar(2, "Fender Telecaster", 1951, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra pretium velit id tincidunt. Duis vel metus in massa rhoncus pulvinar. Suspendisse elit purus, rutrum at nunc et, dignissim pharetra leo. Aliquam erat volutpat. Fusce luctus ligula ligula, sit amet maximus massa viverra eu. Maecenas ac viverra purus. Duis arcu metus, tempor quis sollicitudin commodo, mattis eu lectus. Proin aliquam orci et lectus egestas, lacinia venenatis leo lacinia. Maecenas sed ante quis purus rutrum varius a et quam. Suspendisse vehicula enim non quam vehicula, sit amet sodales mi vestibulum. Vivamus sollicitudin condimentum purus, eu iaculis lacus. Donec dignissim est eget malesuada ornare. Pellentesque vehicula nibh dolor, nec efficitur ex hendrerit nec.", true) );
         list.add(new Guitar(3, "Gibson ES150", 1934, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra pretium velit id tincidunt. Duis vel metus in massa rhoncus pulvinar. Suspendisse elit purus, rutrum at nunc et, dignissim pharetra leo. Aliquam erat volutpat. Fusce luctus ligula ligula, sit amet maximus massa viverra eu. Maecenas ac viverra purus. Duis arcu metus, tempor quis sollicitudin commodo, mattis eu lectus. Proin aliquam orci et lectus egestas, lacinia venenatis leo lacinia. Maecenas sed ante quis purus rutrum varius a et quam. Suspendisse vehicula enim non quam vehicula, sit amet sodales mi vestibulum. Vivamus sollicitudin condimentum purus, eu iaculis lacus. Donec dignissim est eget malesuada ornare. Pellentesque vehicula nibh dolor, nec efficitur ex hendrerit nec.", false));
-//        list.add(new Guitar(4, "Gibson Les Paul", 1952));
+        list.add(new Guitar(4, "Gibson Les Paul", 1952,"The Gibson Les Paul Standard stands as one of the most widely played and universally recognizable guitars ever. First marketed as the Les Paul model in 1952, the Les Paul evolved throughout the '50s until the design was replaced by the SG in late 1960. Up until 1958, the Les Paul sported a gold finish, and guitars from this era are collectively referred to as Goldtops. Goldtop Les Pauls are extremely prized by collectors, and each year showcases the major innovations made by Gibson throughout the decade.", false));
 //        list.add(new Guitar(5, "Rickenbacker 360 12", 1964));
 //        list.add(new Guitar(6, "Gretsch 6128 Duo Jet", 1953));
 //        list.add(new Guitar(7, "Fender Stratocaster", 1954));
