@@ -16,10 +16,10 @@ public class TopGuitars {
 
 
     private ArrayList<Guitar> list;
-    private ArrayList<Guitar> favouriteList;
+//    private ArrayList<Guitar> favouriteList;
 
     public TopGuitars() {
-        favouriteList = new ArrayList<Guitar>();
+//        favouriteList = new ArrayList<Guitar>();
 
         list = new ArrayList<Guitar>();
 
@@ -51,9 +51,9 @@ public class TopGuitars {
         return favouriteGuitars;
     }
 
-    public void addGuitarToFavouriteList(Guitar favouriteGuitarToAdd){
-        favouriteList.add(favouriteGuitarToAdd);
-    }
+//    public void addGuitarToFavouriteList(Guitar favouriteGuitarToAdd){
+//        favouriteList.add(favouriteGuitarToAdd);
+//    }
 
     public void makeGuitarFavourite(Guitar guitarToMakeFavourite) {
         for (Guitar oneGuitar: list) {
