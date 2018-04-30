@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -22,6 +23,12 @@ public class TopGuitarsAdapter extends ArrayAdapter<Guitar> {
         }
 
         Guitar currentGuitar = getItem(position);
+
+        //Array of integers for images:
+        Integer[] images = {R.drawable.fender_strat, R.drawable.fender_tele, R.drawable.gibson_es150};
+        ImageView guitarImage = (ImageView) listItemView.findViewById(R.id.guitarImageId);
+
+        guitarImage.setImageResource(images[position]);
 
         TextView ranking = (TextView) listItemView.findViewById(R.id.rankingTextViewID);
         ranking.setText(currentGuitar.getRanking().toString());

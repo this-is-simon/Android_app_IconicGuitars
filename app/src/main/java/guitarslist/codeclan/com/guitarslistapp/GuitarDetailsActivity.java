@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 public class GuitarDetailsActivity extends AppCompatActivity {
+
+    private Guitar guitar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +17,7 @@ public class GuitarDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_guitar_details);
 
         Intent intent = getIntent();
-        Guitar guitar = (Guitar)intent.getSerializableExtra("guitarToOpen");
+        guitar = (Guitar)intent.getSerializableExtra("guitarToOpen");
 
         Log.d("GuitarDetailsActivi:", guitar.getTitle());
 
@@ -25,6 +28,18 @@ public class GuitarDetailsActivity extends AppCompatActivity {
         guitarDetails.setText(guitar.getDetails().toString());
 
 
+    }
+
+    public void onAddToFavouritesClick(View btn) {
+        addGuitarToFavourites();
+    }
+
+    public void addGuitarToFavourites() {
+        Log.d("openGuitarDetail: ", guitar.getTitle());
+//        add to sharedPreferences
+        Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
+        intent.putExtra("guitarFavourite", guitar);
+        startActivity(intent);
     }
 
 }
