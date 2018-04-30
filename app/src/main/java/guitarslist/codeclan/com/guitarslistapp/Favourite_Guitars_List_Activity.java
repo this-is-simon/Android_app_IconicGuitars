@@ -11,33 +11,42 @@ import java.util.ArrayList;
 
 public class Favourite_Guitars_List_Activity extends AppCompatActivity {
 
-    @Override
+        @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guitars);
 
-//        TopGuitars topGuitars = new TopGuitars(); //UPDATED
-//        ArrayList<Guitar> favouriteGuitars = topGuitars.getList();
-//
-//        TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, list);
-//
-//        listView.setAdapter(guitarsAdapter);
-//        ListView listView = (ListView) findViewById(R.id.guitarListViewId);
-    }
-//
-//    public void onListItemClick(View listItem) {
-//        Guitar guitarClicked = (Guitar) listItem.getTag();
-//        Log.d("Guitar Title: ", guitarClicked.getTitle());
-//
-//        openGuitarDetail(guitarClicked);
-//    }
-//
-//    public void openGuitarDetail(Guitar guitarToOpen) {
-//        Log.d("openGuitarDetail: ", guitarToOpen.getTitle());
-//
-//        Intent intent = new Intent(this, GuitarDetailsActivity.class);
-//        intent.putExtra("guitarToOpen", guitarToOpen);
-//        startActivity(intent);
-//    }
+        TopGuitars topGuitars = TopGuitars.getInstance();
 
+        ArrayList<Guitar> listFavourites = topGuitars.getListFavourites();
+
+        TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, listFavourites);
+
+        ListView listView = (ListView) findViewById(R.id.guitarListViewId);
+        listView.setAdapter(guitarsAdapter);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ListView listView = (ListView) findViewById(R.id.guitarListViewId);
+        listView.invalidateViews();
+
+    }
+
+
+    public void onListItemClick(View listItem) {
+        Guitar guitarClicked = (Guitar) listItem.getTag();
+        Log.d("Guitar Title: ", guitarClicked.getTitle());
+
+        openGuitarDetail(guitarClicked);
+    }
+
+    public void openGuitarDetail(Guitar guitarToOpen) {
+        Log.d("openGuitarDetail: ", guitarToOpen.getTitle());
+
+        Intent intent = new Intent(this, GuitarDetailsActivity.class);
+        intent.putExtra("guitarToOpen", guitarToOpen);
+        startActivity(intent);
+    }
 }

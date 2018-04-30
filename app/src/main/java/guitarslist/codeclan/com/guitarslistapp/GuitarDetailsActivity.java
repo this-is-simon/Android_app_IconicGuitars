@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class GuitarDetailsActivity extends AppCompatActivity {
@@ -27,6 +28,11 @@ public class GuitarDetailsActivity extends AppCompatActivity {
         TextView guitarDetails = findViewById(R.id.guitarDetailsTextViewId);
         guitarDetails.setText(guitar.getDetails().toString());
 
+        Button favouriteButton = findViewById(R.id.favouriteButtonID);
+
+        if (guitar.isFavourite() == true) {
+            favouriteButton.setVisibility(View.INVISIBLE);
+        }
 
     }
 
@@ -36,10 +42,14 @@ public class GuitarDetailsActivity extends AppCompatActivity {
 
     public void addGuitarToFavourites() {
         Log.d("openGuitarDetail: ", guitar.getTitle());
+//        guitar.setFavourite(true);
+        TopGuitars.getInstance().makeGuitarFavourite(guitar);
+
+
 //        add to sharedPreferences
-        Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
-        intent.putExtra("guitarFavourite", guitar);
-        startActivity(intent);
+//        Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
+//        intent.putExtra("guitarFavourite", guitar);
+//        startActivity(intent);
     }
 
 }

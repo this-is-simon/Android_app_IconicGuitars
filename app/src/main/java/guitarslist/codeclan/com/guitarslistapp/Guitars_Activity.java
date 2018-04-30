@@ -16,14 +16,26 @@ public class Guitars_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guitars);
 
-        TopGuitars topGuitars = new TopGuitars(); //UPDATED
+        TopGuitars topGuitars = TopGuitars.getInstance();
+
         ArrayList<Guitar> list = topGuitars.getList();
+//        ArrayList<Guitar> listFav = topGuitars.getListFavourites();
 
         TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, list);
 
         ListView listView = (ListView) findViewById(R.id.guitarListViewId);
         listView.setAdapter(guitarsAdapter);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        ListView listView = (ListView) findViewById(R.id.guitarListViewId);
+        listView.invalidateViews();
+
+
+    }
+
 
     public void onListItemClick(View listItem) {
         Guitar guitarClicked = (Guitar) listItem.getTag();
