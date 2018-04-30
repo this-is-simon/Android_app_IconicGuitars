@@ -63,4 +63,13 @@ public class TopGuitars {
         }
 
     }
+
+    public void removeGuitarFavourite(Guitar guitarToRemoveFromFavourites) {
+        for (Guitar oneGuitar: list) {
+            if (oneGuitar.getTitle().equals(guitarToRemoveFromFavourites.getTitle())){
+                oneGuitar.setFavourite(false);
+            }
+        }
+
+    }
 }

@@ -29,6 +29,7 @@ public class GuitarDetailsActivity extends AppCompatActivity {
         guitarDetails.setText(guitar.getDetails().toString());
 
         Button favouriteButton = findViewById(R.id.favouriteButtonID);
+        Button removeFavouriteButton = findViewById(R.id.removeFavouriteGuitarId);
 
         if (guitar.isFavourite() == true) {
             favouriteButton.setVisibility(View.INVISIBLE);
@@ -42,8 +43,19 @@ public class GuitarDetailsActivity extends AppCompatActivity {
 
     public void addGuitarToFavourites() {
         Log.d("openGuitarDetail: ", guitar.getTitle());
-//        guitar.setFavourite(true);
         TopGuitars.getInstance().makeGuitarFavourite(guitar);
+        Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
+        startActivity(intent);
+    }
+
+    public void onRemoveFromFavouritesClick(View removeFavouriteStatusButton) {
+        removeGuitarFromFavourites();
+    }
+
+    public void removeGuitarFromFavourites() {
+        Log.d("openGuitarDetail: ", guitar.getTitle());
+//        guitar.setFavourite(true);
+        TopGuitars.getInstance().removeGuitarFavourite(guitar);
 
 
 //        add to sharedPreferences
