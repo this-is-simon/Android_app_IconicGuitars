@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Guitars List App</string>
+    <string name="app_name">GuitarCollector</string>
+    <string name="guitar_details">Guitar Details</string>
+    <string name="favourite_guitars">Favourites</string>
 </resources>

@@ -16,8 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GuitarDetailsActivity"></activity>
-        <activity android:name=".Favourite_Guitars_List_Activity"></activity>
+        <activity android:name=".GuitarDetailsActivity"
+            android:label="@string/guitar_details">
+
+        </activity>
+        <activity android:name=".Favourite_Guitars_List_Activity"
+            android:label="@string/favourite_guitars">
+
+        </activity>
     </application>
 
 </manifest>
