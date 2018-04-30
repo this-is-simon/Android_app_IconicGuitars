@@ -47,9 +47,8 @@ public class GuitarDetailsActivity extends AppCompatActivity {
 
 
 //        add to sharedPreferences
-//        Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
-//        intent.putExtra("guitarFavourite", guitar);
-//        startActivity(intent);
+        Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
+        startActivity(intent);
     }
 
 }

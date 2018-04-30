@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".GuitarDetailsActivity"></activity>
+        <activity android:name=".Favourite_Guitars_List_Activity"></activity>
     </application>
 
 </manifest>
