@@ -1,6 +1,7 @@
 package guitarslist.codeclan.com.guitarslistapp;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class TopGuitars {
 
@@ -16,10 +17,14 @@ public class TopGuitars {
 
 
     private ArrayList<Guitar> list;
-//    private ArrayList<Guitar> favouriteList;
+    private HashMap<String, Integer> guitarImageHashMap;
 
     public TopGuitars() {
-//        favouriteList = new ArrayList<Guitar>();
+
+        guitarImageHashMap = new HashMap<>();
+        guitarImageHashMap.put("Fender Stratocaster", R.drawable.fender_strat);
+        guitarImageHashMap.put("Fender Telecaster", R.drawable.fender_tele);
+        guitarImageHashMap.put("Gibson ES150", R.drawable.gibson_es150);
 
         list = new ArrayList<Guitar>();
 
@@ -51,9 +56,6 @@ public class TopGuitars {
         return favouriteGuitars;
     }
 
-//    public void addGuitarToFavouriteList(Guitar favouriteGuitarToAdd){
-//        favouriteList.add(favouriteGuitarToAdd);
-//    }
 
     public void makeGuitarFavourite(Guitar guitarToMakeFavourite) {
         for (Guitar oneGuitar: list) {
@@ -71,5 +73,9 @@ public class TopGuitars {
             }
         }
 
+    }
+
+    public HashMap<String, Integer> getGuitarHashMap() {
+        return this.guitarImageHashMap;
     }
 }

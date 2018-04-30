@@ -23,12 +23,13 @@ public class TopGuitarsAdapter extends ArrayAdapter<Guitar> {
         }
 
         Guitar currentGuitar = getItem(position);
+        TopGuitars topGuitars = new TopGuitars();
 
         //Array of integers for images:
-        Integer[] images = {R.drawable.fender_strat, R.drawable.fender_tele, R.drawable.gibson_es150};
+//        Integer[] images = {R.drawable.fender_strat, R.drawable.fender_tele, R.drawable.gibson_es150};
         ImageView guitarImage = (ImageView) listItemView.findViewById(R.id.guitarImageId);
 
-        guitarImage.setImageResource(images[position]);
+        guitarImage.setImageResource(topGuitars.getGuitarHashMap().get(currentGuitar.getTitle()));
 
         TextView ranking = (TextView) listItemView.findViewById(R.id.rankingTextViewID);
         ranking.setText(currentGuitar.getRanking().toString());
