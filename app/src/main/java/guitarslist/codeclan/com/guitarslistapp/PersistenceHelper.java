@@ -21,4 +21,9 @@ public class PersistenceHelper {
             TopGuitars applicationState = gson.fromJson(sharedPreferences.getString("APPLICATION_STATE", "{}"), TopGuitars.class );
             return applicationState;
         }
+
+    public static void deleteSharedPreferences(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(context.getString(R.string.app_name), Context.MODE_PRIVATE);
+        preferences.edit().clear().commit();
     }
+}

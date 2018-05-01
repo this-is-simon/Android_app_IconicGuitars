@@ -43,7 +43,11 @@ public class GuitarDetailsActivity extends AppCompatActivity {
 
     public void addGuitarToFavourites() {
         Log.d("openGuitarDetail: ", guitar.getTitle());
-        TopGuitars.getInstance().makeGuitarFavourite(guitar);
+
+         TopGuitars topGuitars = PersistenceHelper.loadApplicationState(this);
+         topGuitars.makeGuitarFavourite(guitar);
+         PersistenceHelper.saveApplicationState(this, topGuitars);
+
         Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
         startActivity(intent);
     }
@@ -54,8 +58,10 @@ public class GuitarDetailsActivity extends AppCompatActivity {
 
     public void removeGuitarFromFavourites() {
         Log.d("openGuitarDetail: ", guitar.getTitle());
-//        guitar.setFavourite(true);
-        TopGuitars.getInstance().removeGuitarFavourite(guitar);
+
+        TopGuitars topGuitars = PersistenceHelper.loadApplicationState(this);
+        topGuitars.removeGuitarFavourite(guitar);
+        PersistenceHelper.saveApplicationState(this, topGuitars);
 
         Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
         startActivity(intent);

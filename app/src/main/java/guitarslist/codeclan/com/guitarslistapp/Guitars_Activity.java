@@ -14,36 +14,44 @@ import java.util.ArrayList;
 
 public class Guitars_Activity extends AppCompatActivity {
 
+    TopGuitars topGuitars;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guitars);
+        refreshGuitars();
 
-        TopGuitars topGuitars = TopGuitars.getInstance();
-
-        ArrayList<Guitar> list = topGuitars.getList();
-//        ArrayList<Guitar> listFav = topGuitars.getListFavourites();
-
-        TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, list);
+        TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, topGuitars.getList());
 
         ListView listView = (ListView) findViewById(R.id.guitarListViewId);
         listView.setAdapter(guitarsAdapter);
 
-//        PERSISTENCE STUFF
-//        ApplicationState applicationState = PersistenceHelper.loadApplicationState(this);
-//
-//        if (applicationState.getFavouriteMovies() == null){
-//            applicationState = new ApplicationState("NONAME");
-//            PersistenceHelper.saveApplicationState(this, applicationState);
-//        }
+    }
 
+    private void refreshGuitars(){
+        //app loads
+        //do I have a saved top guitars in persistance?
+        //if not get from seed, then save it in persistance
+        //if yes, load from persistance
+
+        topGuitars = PersistenceHelper.loadApplicationState(this);
+        if (topGuitars.getList().size() == 0 ){
+
+            topGuitars = new TopGuitars();
+            PersistenceHelper.saveApplicationState(this, topGuitars);
+
+        }
     }
 
     @Override
     protected void onResume() {
         super.onResume();
+        refreshGuitars();
         ListView listView = (ListView) findViewById(R.id.guitarListViewId);
-        listView.invalidateViews();
+
+        TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, topGuitars.getList());
+        listView.setAdapter(guitarsAdapter);
 
 
     }
@@ -51,7 +59,7 @@ public class Guitars_Activity extends AppCompatActivity {
     @Override
     protected void onPause(){
         super.onPause();
-        Log.d("PAUSING!!!!!!!", TopGuitars.getInstance().getListFavourites().toString());
+//        Log.d("PAUSING!!!!!!!", TopGuitars.getInstance().getListFavourites().toString());
     }
 
     public void onListItemClick(View listItem) {
