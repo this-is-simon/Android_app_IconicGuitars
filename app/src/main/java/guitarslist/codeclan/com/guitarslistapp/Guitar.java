@@ -49,4 +49,5 @@ public class Guitar implements Serializable {
     public void setFavourite(boolean favourite) {
         isFavourite = favourite;
     }
+
 }
