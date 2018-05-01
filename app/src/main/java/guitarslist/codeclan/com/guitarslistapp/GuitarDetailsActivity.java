@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class GuitarDetailsActivity extends AppCompatActivity {
 
     private Guitar guitar;
+    // Button favouriteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class GuitarDetailsActivity extends AppCompatActivity {
         guitarDetails.setText(guitar.getDetails().toString());
 
         Button favouriteButton = findViewById(R.id.favouriteButtonID);
+        //Remove 'Button' on line 32 but keep the rest of the line
         Button removeFavouriteButton = findViewById(R.id.removeFavouriteGuitarId);
 
         if (guitar.isFavourite() == true) {
@@ -38,6 +40,14 @@ public class GuitarDetailsActivity extends AppCompatActivity {
     }
 
     public void onAddToFavouritesClick(View btn) {
+        //if (btn == favouriteButton) {
+        //  addGuitartoFavourites();
+        //  and set the text to 'Remove From Favourites' with favouriteButton.setText
+        // } else {
+        //  removeGuitarFromFavourites();
+        // }
+        // and set the text to 'Add to Favourites' with favouriteButton.setText
+
         addGuitarToFavourites();
     }
 

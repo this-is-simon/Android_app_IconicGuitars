@@ -81,15 +81,14 @@ public class Favourite_Guitars_List_Activity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.activity_main, menu);
+        menuInflater.inflate(R.menu.activity_favourites, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.menu_favourites) {
-            // TODO: do something
-            Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
+        if (item.getItemId() == R.id.menu_main) {
+            Intent intent = new Intent(this, Guitars_Activity.class);
             startActivity(intent);
             return true;
         }
