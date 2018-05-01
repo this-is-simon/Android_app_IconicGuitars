@@ -24,7 +24,16 @@ public class Favourite_Guitars_List_Activity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.guitarListViewId);
         listView.setAdapter(guitarsAdapter);
-    }
+
+//            PERSISTENCE STUFF
+//            Intent intent = getIntent();
+//            Movie favouriteMovieToAddToCollection = (Movie) intent.getSerializableExtra("movie");
+//
+//            ApplicationState applicationState = PersistenceHelper.loadApplicationState(this);
+//            applicationState.getFavouriteMovies().add(favouriteMovieToAddToCollection);
+//            PersistenceHelper.saveApplicationState(this, applicationState);
+
+        }
 
     @Override
     protected void onResume() {

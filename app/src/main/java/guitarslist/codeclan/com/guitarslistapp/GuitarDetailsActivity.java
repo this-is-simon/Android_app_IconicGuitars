@@ -57,8 +57,6 @@ public class GuitarDetailsActivity extends AppCompatActivity {
 //        guitar.setFavourite(true);
         TopGuitars.getInstance().removeGuitarFavourite(guitar);
 
-
-//        add to sharedPreferences
         Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
         startActivity(intent);
     }
