@@ -1,6 +1,8 @@
 package guitarslist.codeclan.com.guitarslistapp;
 
-public class Budget {
+import java.io.Serializable;
+
+public class Budget  implements Serializable {
 
     private int currentBudget;
     private int monthlySavings;
@@ -10,11 +12,31 @@ public class Budget {
         this.monthlySavings = monthlySavings;
     }
 
+    public Budget(){
+        this.currentBudget = 0;
+        this.monthlySavings = 0;
+    }
 
-//    public String howLongToAffordGuitar(Guitar guitar){
-//        int numberOfMonths = (guitar.getPriceOfGuitar - currentBudget) / monthlySavings;
-//         = e.g. 50;
-//        return numberOfMonths + "months"
-//    }
+    public int getCurrentBudget(){
+        return this.currentBudget;
+    }
+
+    public int getMonthlySavings(){
+        return this.monthlySavings;
+    }
+
+    public String howLongToAffordGuitar(Guitar guitar){
+        return howManuMonthsToAffordGuitar(guitar) + "months";
+    }
+
+    public int howManuMonthsToAffordGuitar(Guitar guitar){
+
+        int numberOfMonths = (guitar.getPriceOfGuitar - currentBudget) / monthlySavings;
+
+
+        return 0; //TODO
+    }
+
+
 
 }

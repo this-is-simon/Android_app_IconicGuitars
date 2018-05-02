@@ -3,13 +3,23 @@ package guitarslist.codeclan.com.guitarslistapp;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class TopGuitars {
+public class TopGuitars  {
 
     private ArrayList<Guitar> list;
     private HashMap<String, Integer> guitarImageHashMap;
+    private Budget budget;
 
     public TopGuitars() {
         list = getSeed();
+        budget = new Budget();
+    }
+
+
+    public void updateBudgetInfoOnGuitars(){ //call this method when someone changes the budget
+        //loop troiugh all guitars
+            //for each guitar update budget string
+            // g.setBudgetString(budget.howLongForGuitar(g));
+
     }
 
     public ArrayList<Guitar> getList (){

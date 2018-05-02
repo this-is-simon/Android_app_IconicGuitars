@@ -56,12 +56,6 @@ public class Guitars_Activity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onPause(){
-        super.onPause();
-//        Log.d("PAUSING!!!!!!!", TopGuitars.getInstance().getListFavourites().toString());
-    }
-
     public void onListItemClick(View listItem) {
         Guitar guitarClicked = (Guitar) listItem.getTag();
         Log.d("Guitar Title: ", guitarClicked.getTitle());
@@ -87,7 +81,6 @@ public class Guitars_Activity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.menu_favourites) {
-            // TODO: do something
             Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
             startActivity(intent);
             return true;

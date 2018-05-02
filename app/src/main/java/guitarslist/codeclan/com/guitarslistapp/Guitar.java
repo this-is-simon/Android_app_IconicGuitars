@@ -12,14 +12,16 @@ public class Guitar implements Serializable {
     private String details;
     private boolean isFavourite;
     private String notablePlayers;
+    private int priceOfGuitar;
 
-    public Guitar(Integer ranking, String title, Integer year, String details, boolean isFavourite, String notablePlayers){
+    public Guitar(Integer ranking, String title, Integer year, String details, boolean isFavourite, String notablePlayers, int priceOfGuitar){
         this.ranking = ranking;
         this.title = title;
         this.year = year;
         this.details = details;
         this.isFavourite = isFavourite;
         this.notablePlayers = notablePlayers;
+        this.priceOfGuitar = priceOfGuitar;
     }
 
     public Integer getRanking() {
@@ -48,6 +50,10 @@ public class Guitar implements Serializable {
 
     public void setFavourite(boolean favourite) {
         isFavourite = favourite;
+    }
+
+    public int getPriceOfGuitar(){
+        return this.priceOfGuitar;
     }
 
 }
