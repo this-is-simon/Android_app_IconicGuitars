@@ -12,9 +12,9 @@ public class Guitar implements Serializable {
     private String details;
     private boolean isFavourite;
     private String notablePlayers;
-    private int priceOfGuitar;
+    private Integer priceOfGuitar;
 
-    public Guitar(Integer ranking, String title, Integer year, String details, boolean isFavourite, String notablePlayers, int priceOfGuitar){
+    public Guitar(Integer ranking, String title, Integer year, String details, boolean isFavourite, String notablePlayers, Integer priceOfGuitar){
         this.ranking = ranking;
         this.title = title;
         this.year = year;
@@ -52,8 +52,12 @@ public class Guitar implements Serializable {
         isFavourite = favourite;
     }
 
-    public int getPriceOfGuitar(){
+    public Integer getPriceOfGuitar(){
         return this.priceOfGuitar;
+    }
+
+    public String setBudgetString(String months){
+        return "It will take you " + months + " to afford a " + title;
     }
 
 }

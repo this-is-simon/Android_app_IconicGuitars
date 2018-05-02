@@ -18,13 +18,15 @@ public class BudgetActivity extends AppCompatActivity {
 
         userBudgetInput = findViewById(R.id.currentBudgetInputId);
         userMonthlySavingsInput = findViewById(R.id.monthlySavingsInputId);
-        //TODO: get persisted budget and pre-fill intuts if there's anything there
+
+        //get persisted budget and pre-fill inputs if there's anything there
         TopGuitars topGuitars = PersistenceHelper.loadApplicationState(this);
 
-        String userSavingsSoFar = topGuitars.getBudget().getCurrentSavings();
-        userBudgetInput.setText( userSavingsSoFar );
+        String userCurrentBudget = topGuitars.getBudget().getCurrentBudget().toString();
+        userBudgetInput.setText( userCurrentBudget );
 
-        //TODO: same fpr the other one
+        String userMonthlySavings = topGuitars.getBudget().getMonthlySavings().toString();
+        userMonthlySavingsInput.setText( userMonthlySavings );
     }
 
     public void onClick(View button){
@@ -32,15 +34,15 @@ public class BudgetActivity extends AppCompatActivity {
 
 
         String userInitialMoneyString = userBudgetInput.getText().toString();
-        int userInitialMoney = 0; //TODO: change string to int
-
+        int userInitialMoney = Integer.parseInt(userInitialMoneyString);
+        //changes string to int
 
         String userMonthlyMoneyString = userMonthlySavingsInput.getText().toString();
-        int userMonthlyMoney = 0; //TODO: change string to int
+        int userMonthlyMoney = Integer.parseInt(userMonthlyMoneyString);
+        //changes string to int
 
-
-        //TODO: load the Shared Preferences budget (or new up???)
         TopGuitars topGuitars = PersistenceHelper.loadApplicationState(this);
+        //loads SharedPreferences
 
         //TODO: make the change in shared prefs -> Save above values into budget
         topGuitars.updateBudgetWithInputs(userInitialMoney, userMonthlyMoney); //TODO: write this method

@@ -40,7 +40,6 @@ public class TopGuitarsAdapter extends ArrayAdapter<Guitar> {
 
         ImageView favouriteStar = (ImageView) listItemView.findViewById(R.id.starImageViewID);
 
-
         favouriteStar.setVisibility( currentGuitar.isFavourite() ? View.VISIBLE : View.INVISIBLE);
 
         listItemView.setTag(currentGuitar);

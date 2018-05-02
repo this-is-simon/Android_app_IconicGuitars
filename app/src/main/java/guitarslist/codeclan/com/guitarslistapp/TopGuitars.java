@@ -15,11 +15,17 @@ public class TopGuitars  {
     }
 
 
+    public Budget getBudget(){
+        return this.budget;
+    }
+
     public void updateBudgetInfoOnGuitars(){ //call this method when someone changes the budget
         //loop troiugh all guitars
             //for each guitar update budget string
             // g.setBudgetString(budget.howLongForGuitar(g));
-
+        for (Guitar oneGuitar: list) {
+                oneGuitar.setBudgetString(budget.howLongToAffordGuitar(oneGuitar));
+            }
     }
 
     public ArrayList<Guitar> getList (){
