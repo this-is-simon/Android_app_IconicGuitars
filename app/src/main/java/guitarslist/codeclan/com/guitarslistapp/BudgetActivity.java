@@ -31,8 +31,6 @@ public class BudgetActivity extends AppCompatActivity {
 
     public void onClick(View button){
 
-
-
         String userInitialMoneyString = userBudgetInput.getText().toString();
         int userInitialMoney = Integer.parseInt(userInitialMoneyString);
         //changes string to int
@@ -45,13 +43,10 @@ public class BudgetActivity extends AppCompatActivity {
         //loads SharedPreferences
 
         //TODO: make the change in shared prefs -> Save above values into budget
-        topGuitars.updateBudgetWithInputs(userInitialMoney, userMonthlyMoney); //TODO: write this method
+//        topGuitars.updateBudgetWithInputs(userInitialMoney, userMonthlyMoney); //TODO: write this method
 
         //TODO: save new state in shared prefs
         PersistenceHelper.saveApplicationState(this, topGuitars);
-
-
-
 
     }
 

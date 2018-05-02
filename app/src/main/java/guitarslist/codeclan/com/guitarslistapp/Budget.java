@@ -34,7 +34,4 @@ public class Budget  implements Serializable {
         return howManyMonthsToAffordGuitar(guitar) + " months";
     }
 
-
-
-
 }
