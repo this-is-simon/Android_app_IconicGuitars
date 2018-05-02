@@ -26,15 +26,12 @@ public class Budget  implements Serializable {
     }
 
     public String howLongToAffordGuitar(Guitar guitar){
-        return howManuMonthsToAffordGuitar(guitar) + "months";
+        return howManyMonthsToAffordGuitar(guitar) + "months";
     }
 
-    public int howManuMonthsToAffordGuitar(Guitar guitar){
-
-        int numberOfMonths = (guitar.getPriceOfGuitar - currentBudget) / monthlySavings;
-
-
-        return 0; //TODO
+    public int howManyMonthsToAffordGuitar(Guitar guitar){
+        int numberOfMonths = (guitar.getPriceOfGuitar() - currentBudget) / monthlySavings;
+        return numberOfMonths;
     }
 
 
