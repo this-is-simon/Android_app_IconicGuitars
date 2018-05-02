@@ -24,4 +24,9 @@ public class GuitarTest {
         assertEquals((Integer)9000, guitar1.getPriceOfGuitar());
     }
 
+    @Test
+    public void canSetBudgetString(){
+        assertEquals((String)"It will take you 5 months to afford a Gibson ES150", guitar1.getBudgetString("5 months"));
+    }
+
 }

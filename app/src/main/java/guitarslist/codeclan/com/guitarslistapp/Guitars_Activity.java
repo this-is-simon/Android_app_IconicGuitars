@@ -21,7 +21,7 @@ public class Guitars_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_guitars);
         refreshGuitars();
-
+        topGuitars.updateBudgetInfoOnGuitars();
         TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, topGuitars.getList());
 
         ListView listView = (ListView) findViewById(R.id.guitarListViewId);
@@ -48,6 +48,7 @@ public class Guitars_Activity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         refreshGuitars();
+        topGuitars.updateBudgetInfoOnGuitars();
         ListView listView = (ListView) findViewById(R.id.guitarListViewId);
 
         TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, topGuitars.getList());

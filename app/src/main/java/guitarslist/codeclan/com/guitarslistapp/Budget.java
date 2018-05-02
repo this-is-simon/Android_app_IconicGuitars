@@ -14,7 +14,7 @@ public class Budget  implements Serializable {
 
     public Budget(){
         this.currentBudget = 0;
-        this.monthlySavings = 0;
+        this.monthlySavings = 20000;
     }
 
     public void setCurrentBudget(Integer currentBudget) {

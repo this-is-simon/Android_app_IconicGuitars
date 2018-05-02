@@ -23,6 +23,7 @@ public class Guitar implements Serializable {
         this.isFavourite = isFavourite;
         this.notablePlayers = notablePlayers;
         this.priceOfGuitar = priceOfGuitar;
+        this.budgetString = null;
     }
 
     public Integer getRanking() {

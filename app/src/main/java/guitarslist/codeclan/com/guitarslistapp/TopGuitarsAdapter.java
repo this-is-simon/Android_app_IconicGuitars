@@ -39,7 +39,7 @@ public class TopGuitarsAdapter extends ArrayAdapter<Guitar> {
         guitarYear.setText(currentGuitar.getYear().toString());
 
         TextView monthsToPayForGuitar = (TextView) listItemView.findViewById(R.id.howManyMonthsToAffordGuitarId);
-        monthsToPayForGuitar.setText(currentGuitar.getPriceOfGuitar().toString());
+        monthsToPayForGuitar.setText(currentGuitar.getBudgetString());
         //Change this to get Budget String
 
         ImageView favouriteStar = (ImageView) listItemView.findViewById(R.id.starImageViewID);
