@@ -11,7 +11,6 @@ import android.widget.TextView;
 public class GuitarDetailsActivity extends AppCompatActivity {
 
     private Guitar guitar;
-    // Button favouriteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
