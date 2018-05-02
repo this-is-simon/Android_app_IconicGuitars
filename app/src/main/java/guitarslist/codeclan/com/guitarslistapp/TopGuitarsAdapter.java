@@ -38,6 +38,10 @@ public class TopGuitarsAdapter extends ArrayAdapter<Guitar> {
         TextView guitarYear = (TextView) listItemView.findViewById(R.id.yearTextViewId);
         guitarYear.setText(currentGuitar.getYear().toString());
 
+        TextView monthsToPayForGuitar = (TextView) listItemView.findViewById(R.id.howManyMonthsToAffordGuitarId);
+        monthsToPayForGuitar.setText(currentGuitar.getPriceOfGuitar().toString());
+        //Change this to get Budget String
+
         ImageView favouriteStar = (ImageView) listItemView.findViewById(R.id.starImageViewID);
 
         favouriteStar.setVisibility( currentGuitar.isFavourite() ? View.VISIBLE : View.INVISIBLE);

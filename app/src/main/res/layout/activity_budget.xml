@@ -14,44 +14,59 @@
             android:id="@+id/monthlySavingsInputId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
             android:ems="10"
             android:hint="£"
             android:inputType="number"
-            tools:layout_editor_absoluteX="85dp"
-            tools:layout_editor_absoluteY="266dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/howMuchCanYouSaveId" />
 
         <EditText
             android:id="@+id/currentBudgetInputId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
             android:ems="10"
             android:hint="£"
             android:inputType="number"
-            tools:layout_editor_absoluteX="84dp"
-            tools:layout_editor_absoluteY="89dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/howMuchHaveYouGotId2" />
 
         <TextView
             android:id="@+id/howMuchCanYouSaveId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
             android:text="How much can you save each month?"
-            tools:layout_editor_absoluteX="84dp"
-            tools:layout_editor_absoluteY="215dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/currentBudgetInputId" />
 
         <TextView
             android:id="@+id/howMuchHaveYouGotId2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
             android:text="How much have you got?"
-            tools:layout_editor_absoluteX="84dp"
-            tools:layout_editor_absoluteY="48dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/setBudgetButtonId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
             android:text="Set Budget"
-            tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="390dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/monthlySavingsInputId" />
     </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>

@@ -84,7 +84,9 @@ public class Guitars_Activity extends AppCompatActivity {
             Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
             startActivity(intent);
             return true;
-        }
+        } else if (item.getItemId() == R.id.activity_budget) {
+            Intent intent = new Intent(this, BudgetActivity.class);
+            startActivity(intent);}
         return super.onOptionsItemSelected(item);
     }
 

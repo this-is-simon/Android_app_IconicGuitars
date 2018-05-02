@@ -28,6 +28,11 @@ public class TopGuitars  {
             }
     }
 
+    public void updateBudgetWithInputs(int userInitialMoney, int userMonthlyMoney){
+        getBudget().setCurrentBudget(userInitialMoney);
+        getBudget().setMonthlySavings(userMonthlyMoney);
+    }
+
     public ArrayList<Guitar> getList (){
         return new ArrayList<Guitar> (list);
     }
