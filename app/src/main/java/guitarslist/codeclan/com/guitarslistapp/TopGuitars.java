@@ -54,7 +54,6 @@ public class TopGuitars  {
                 oneGuitar.setFavourite(true);
             }
         }
-
     }
 
     public void removeGuitarFavourite(Guitar guitarToRemoveFromFavourites) {
@@ -63,7 +62,6 @@ public class TopGuitars  {
                 oneGuitar.setFavourite(false);
             }
         }
-
     }
 
     public HashMap<String, Integer> getGuitarHashMap() {

@@ -49,6 +49,8 @@ public class Favourite_Guitars_List_Activity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         refreshGuitars();
+        topGuitars.updateBudgetInfoOnGuitars();
+
         ListView listView = (ListView) findViewById(R.id.guitarListViewId);
 
         TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, topGuitars.getListFavourites());
