@@ -58,6 +58,10 @@ public class Guitar implements Serializable {
         return this.priceOfGuitar;
     }
 
+    public String getPriceOfGuitarString(){
+        return "Average price: £" + priceOfGuitar;
+    }
+
     public void setBudgetString(String months){
         budgetString =  "It will take you " + months + " to afford a " + title;
     }
