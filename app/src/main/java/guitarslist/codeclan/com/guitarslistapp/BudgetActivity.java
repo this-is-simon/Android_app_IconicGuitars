@@ -23,7 +23,6 @@ public class BudgetActivity extends AppCompatActivity {
         userMonthlySavingsInput = findViewById(R.id.monthlySavingsInputId);
         Button setBudgetButton = findViewById(R.id.setBudgetButtonId);
 
-        //get persisted budget and pre-fill inputs if there's anything there
         TopGuitars topGuitars = PersistenceHelper.loadApplicationState(this);
 
         String userCurrentBudget = topGuitars.getBudget().getCurrentBudget().toString();
@@ -37,21 +36,16 @@ public class BudgetActivity extends AppCompatActivity {
 
         String userInitialMoneyString = userBudgetInput.getText().toString();
         int userInitialMoney = Integer.parseInt(userInitialMoneyString);
-        //changes string to int
 
         String userMonthlyMoneyString = userMonthlySavingsInput.getText().toString();
         int userMonthlyMoney = Integer.parseInt(userMonthlyMoneyString);
-        //changes string to int
 
         TopGuitars topGuitars = PersistenceHelper.loadApplicationState(this);
-        //loads SharedPreferences
 
-        //TODO: make the change in shared prefs -> Save above values into budget
         topGuitars.updateBudgetWithInputs(userInitialMoney, userMonthlyMoney); //TODO: write this method
 
-        //TODO: save new state in shared prefs
         PersistenceHelper.saveApplicationState(this, topGuitars);
-        Log.d("Budget button clicked", "Budget button is clicked");
+
         Intent intent = new Intent(this, Favourite_Guitars_List_Activity.class);
         startActivity(intent);
     }

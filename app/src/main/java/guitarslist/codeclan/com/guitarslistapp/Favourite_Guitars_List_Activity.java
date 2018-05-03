@@ -31,17 +31,11 @@ public class Favourite_Guitars_List_Activity extends AppCompatActivity {
     }
 
     private void refreshGuitars(){
-        //app loads
-        //do I have a saved top guitars in persistance?
-        //if not get from seed, then save it in persistance
-        //if yes, load from persistance
-
         topGuitars = PersistenceHelper.loadApplicationState(this);
         if (topGuitars.getList().size() == 0 ){
 
             topGuitars = new TopGuitars();
             PersistenceHelper.saveApplicationState(this, topGuitars);
-
         }
     }
 
@@ -55,14 +49,11 @@ public class Favourite_Guitars_List_Activity extends AppCompatActivity {
 
         TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, topGuitars.getListFavourites());
         listView.setAdapter(guitarsAdapter);
-
-
     }
 
     @Override
     protected void onPause(){
         super.onPause();
-//        Log.d("PAUSING!!!!!!!", TopGuitars.getInstance().getListFavourites().toString());
     }
 
     public void onListItemClick(View listItem) {

@@ -20,8 +20,6 @@ public class GuitarDetailsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         guitar = (Guitar)intent.getSerializableExtra("guitarToOpen");
 
-        Log.d("GuitarDetailsActivi:", guitar.getTitle());
-
         TextView guitarTitle = findViewById(R.id.guitarTitleTextViewId);
         guitarTitle.setText(guitar.getTitle().toString());
 
@@ -29,7 +27,7 @@ public class GuitarDetailsActivity extends AppCompatActivity {
         guitarDetails.setText(guitar.getDetails().toString());
 
         Button favouriteButton = findViewById(R.id.favouriteButtonID);
-        //Remove 'Button' on line 32 but keep the rest of the line
+
         Button removeFavouriteButton = findViewById(R.id.removeFavouriteGuitarId);
 
         if (guitar.isFavourite() == true) {
@@ -39,20 +37,10 @@ public class GuitarDetailsActivity extends AppCompatActivity {
     }
 
     public void onAddToFavouritesClick(View btn) {
-        //if (btn == favouriteButton) {
-        //  addGuitartoFavourites();
-        //  and set the text to 'Remove From Favourites' with favouriteButton.setText
-        // } else {
-        //  removeGuitarFromFavourites();
-        // }
-        // and set the text to 'Add to Favourites' with favouriteButton.setText
-
         addGuitarToFavourites();
     }
 
     public void addGuitarToFavourites() {
-        Log.d("openGuitarDetail: ", guitar.getTitle());
-
          TopGuitars topGuitars = PersistenceHelper.loadApplicationState(this);
          topGuitars.makeGuitarFavourite(guitar);
          PersistenceHelper.saveApplicationState(this, topGuitars);
@@ -66,8 +54,6 @@ public class GuitarDetailsActivity extends AppCompatActivity {
     }
 
     public void removeGuitarFromFavourites() {
-        Log.d("openGuitarDetail: ", guitar.getTitle());
-
         TopGuitars topGuitars = PersistenceHelper.loadApplicationState(this);
         topGuitars.removeGuitarFavourite(guitar);
         PersistenceHelper.saveApplicationState(this, topGuitars);
