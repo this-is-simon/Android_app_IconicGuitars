@@ -31,6 +31,7 @@
 
     <Button
         android:id="@+id/favouriteButtonID"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -40,6 +41,7 @@
         android:layout_marginTop="16dp"
         android:onClick="onAddToFavouritesClick"
         android:text="Add to Favourites"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guitarDetailsTextViewId"
@@ -47,6 +49,7 @@
 
     <Button
         android:id="@+id/removeFavouriteGuitarId"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -56,6 +59,7 @@
         android:layout_marginTop="8dp"
         android:onClick="onRemoveFromFavouritesClick"
         android:text="Remove From Favourites"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/favouriteButtonID"
