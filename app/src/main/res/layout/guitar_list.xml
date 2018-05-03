@@ -91,7 +91,7 @@
             android:layout_marginTop="8dp"
             card_view:layout_constraintEnd_toEndOf="@+id/guitarImageId"
             card_view:layout_constraintTop_toTopOf="@+id/guitarImageId"
-            card_view:srcCompat="@android:drawable/btn_star_big_on" />
+            card_view:srcCompat="@drawable/heart" />
 
         <TextView
             android:id="@+id/howManyMonthsToAffordGuitarId"
