@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">GuitarCollector</string>
+    <string name="app_name">IconicGuitars</string>
     <string name="guitar_details">Guitar Details</string>
+    <string name="budget">Budget</string>
     <string name="favourite_guitars">Favourite Guitars</string>
     <string name="back_to_main">Back to main</string>
 </resources>

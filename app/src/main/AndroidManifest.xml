@@ -22,7 +22,8 @@
         <activity
             android:name=".Favourite_Guitars_List_Activity"
             android:label="@string/favourite_guitars"></activity>
-        <activity android:name=".BudgetActivity"></activity>
+        <activity android:name=".BudgetActivity"
+            android:label="@string/budget"></activity>
     </application>
 
 </manifest>

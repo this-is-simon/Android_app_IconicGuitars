@@ -60,6 +60,7 @@
 
         <Button
             android:id="@+id/setBudgetButtonId"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="32dp"
@@ -67,6 +68,7 @@
             android:layout_marginTop="32dp"
             android:onClick="onClicKBudget"
             android:text="Set Budget"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/monthlySavingsInputId" />
     </android.support.constraint.ConstraintLayout>
