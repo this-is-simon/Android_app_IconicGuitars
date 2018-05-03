@@ -1,6 +1,7 @@
 package guitarslist.codeclan.com.guitarslistapp;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ public class TopGuitarsAdapter extends ArrayAdapter<Guitar> {
 
     @Override
     public View getView(int position, View listItemView, ViewGroup parent) {
+
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.guitar_list, parent, false);
         }
@@ -40,7 +42,6 @@ public class TopGuitarsAdapter extends ArrayAdapter<Guitar> {
 
         TextView monthsToPayForGuitar = (TextView) listItemView.findViewById(R.id.howManyMonthsToAffordGuitarId);
         monthsToPayForGuitar.setText(currentGuitar.getBudgetString());
-        //Change this to get Budget String
 
         ImageView favouriteStar = (ImageView) listItemView.findViewById(R.id.starImageViewID);
 
