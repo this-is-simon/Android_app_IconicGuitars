@@ -36,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:onClick="onAddToFavouritesClick"
         android:text="Add to Favourites"
         app:layout_constraintEnd_toEndOf="parent"
