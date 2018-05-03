@@ -46,6 +46,10 @@ public class Guitar implements Serializable {
         return notablePlayers;
     }
 
+    public String getNotablePlayersString() {
+        return "Notable players include: " + notablePlayers;
+    }
+
     public boolean isFavourite() {
         return isFavourite;
     }

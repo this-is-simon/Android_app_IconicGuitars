@@ -26,6 +26,9 @@ public class GuitarDetailsActivity extends AppCompatActivity {
         TextView guitarDetails = findViewById(R.id.guitarDetailsTextViewId);
         guitarDetails.setText(guitar.getDetails().toString());
 
+        TextView notablePlayers = findViewById(R.id.notablePlayersTextViewId);
+        notablePlayers.setText(guitar.getNotablePlayersString());
+
         Button favouriteButton = findViewById(R.id.favouriteButtonID);
 
         Button removeFavouriteButton = findViewById(R.id.removeFavouriteGuitarId);

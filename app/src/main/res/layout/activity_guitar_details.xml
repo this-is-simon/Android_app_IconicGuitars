@@ -38,13 +38,14 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:onClick="onAddToFavouritesClick"
         android:text="Add to Favourites"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guitarDetailsTextViewId"
+        app:layout_constraintTop_toBottomOf="@+id/notablePlayersTextViewId"
         tools:text="Add to Favourites" />
 
     <Button
@@ -64,4 +65,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/favouriteButtonID"
         tools:text="Remove From Favourites" />
+
+    <TextView
+        android:id="@+id/notablePlayersTextViewId"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guitarDetailsTextViewId"
+        tools:text="Notable Players" />
 </android.support.constraint.ConstraintLayout>
