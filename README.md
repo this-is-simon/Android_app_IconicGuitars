@@ -8,3 +8,5 @@ The app uses SharedPreferences in order to persist all data stored within the ap
 This app was a week-long project I completed as part of the Codeclan 16-week intensive Software Development course in Edinburgh, having studied Java for only 2 weeks and Android for an additional week.
 
 Enjoy!
+
+**Icons made by Freepik from www.flaticon.com is licensed by CC 3.0.
