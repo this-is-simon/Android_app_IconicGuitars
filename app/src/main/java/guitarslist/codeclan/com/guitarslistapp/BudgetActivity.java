@@ -42,7 +42,7 @@ public class BudgetActivity extends AppCompatActivity {
 
         TopGuitars topGuitars = PersistenceHelper.loadApplicationState(this);
 
-        topGuitars.updateBudgetWithInputs(userInitialMoney, userMonthlyMoney); //TODO: write this method
+        topGuitars.updateBudgetWithInputs(userInitialMoney, userMonthlyMoney);
 
         PersistenceHelper.saveApplicationState(this, topGuitars);
 

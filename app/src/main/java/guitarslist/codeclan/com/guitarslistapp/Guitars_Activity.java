@@ -26,21 +26,13 @@ public class Guitars_Activity extends AppCompatActivity {
 
         ListView listView = (ListView) findViewById(R.id.guitarListViewId);
         listView.setAdapter(guitarsAdapter);
-
     }
 
     private void refreshGuitars(){
-        //app loads
-        //do I have a saved top guitars in persistance?
-        //if not get from seed, then save it in persistance
-        //if yes, load from persistance
-
         topGuitars = PersistenceHelper.loadApplicationState(this);
         if (topGuitars.getList().size() == 0 ){
-
             topGuitars = new TopGuitars();
             PersistenceHelper.saveApplicationState(this, topGuitars);
-
         }
     }
 
@@ -53,20 +45,14 @@ public class Guitars_Activity extends AppCompatActivity {
 
         TopGuitarsAdapter guitarsAdapter = new TopGuitarsAdapter(this, topGuitars.getList());
         listView.setAdapter(guitarsAdapter);
-
-
     }
 
     public void onListItemClick(View listItem) {
         Guitar guitarClicked = (Guitar) listItem.getTag();
-        Log.d("Guitar Title: ", guitarClicked.getTitle());
-
         openGuitarDetail(guitarClicked);
     }
 
     public void openGuitarDetail(Guitar guitarToOpen) {
-        Log.d("openGuitarDetail: ", guitarToOpen.getTitle());
-
         Intent intent = new Intent(this, GuitarDetailsActivity.class);
         intent.putExtra("guitarToOpen", guitarToOpen);
         startActivity(intent);
